@@ -806,6 +806,9 @@ body {
     padding-left: 100%;
     margin: 0 auto
   }
+  .rightside {
+    display: flex
+  }
   .center {
     justify-content: flex-end
   }
@@ -955,9 +958,6 @@ body {
   }
   .services__items {
     row-gap: 1.5rem
-  }
-  .rightside {
-    display: flex
   }
   .item-services-item__title {
     font-size: 24px
