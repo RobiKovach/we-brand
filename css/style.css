@@ -159,7 +159,7 @@ h6 {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url(../../../img/icon.svg)
+  background: url(../img/icon.svg)
 }
 ._select-open .select__value:after {
   -webkit-transform: rotate(-180deg);
