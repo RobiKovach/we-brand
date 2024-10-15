@@ -1139,6 +1139,16 @@
         termField.value = utm_term;
         contentField.value = utm_content;
     }));
+    document.getElementById("main-form1").addEventListener("submit", (function() {
+        var select = document.getElementById("select1");
+        var selectText = select.options[select.selectedIndex].text;
+        document.getElementById("select_text1").value = selectText;
+    }));
+    document.getElementById("main-form2").addEventListener("submit", (function() {
+        var select = document.getElementById("select2");
+        var selectText = select.options[select.selectedIndex].text;
+        document.getElementById("select_text2").value = selectText;
+    }));
     window["FLS"] = true;
     menuInit();
     formFieldsInit({

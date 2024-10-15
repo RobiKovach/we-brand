@@ -798,6 +798,31 @@ body {
   font-weight: 500;
   line-height: normal
 }
+.done-text {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem
+}
+.done-text__title {
+  color: #12181f;
+  text-align: center;
+  font-size: 34px;
+  font-weight: 600;
+  line-height: normal
+}
+.done-text__subtitle {
+  color: #12181f;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: normal
+}
+.done-text-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%
+}
 @media (max-width:1024px) {
   .stroke__text {
     -webkit-animation: text 5s infinite linear;

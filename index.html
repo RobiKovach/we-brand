@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20241015130942">
+	<link rel="stylesheet" href="css/style.min.css?_v=20241015134932">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -218,14 +218,14 @@
 							<div class="left-contact__text">
 								Оберіть послуги, які вас цікавлять, залиште контакти – ми зателефонуємо і про все домовимося.
 							</div>
-							<form data-ajax data-popup-message="#maildone" action="files/sendmail/webhoock.php" class="left-contact__form" method="POST">
+							<form data-ajax data-popup-message="#maildone" id="main-form2" action="files/sendmail/webhoock.php" class="left-contact__form" method="POST">
 								<div class="form-questions__body">
 									<input type="hidden" id="utm_source" name="utm_source">
 									<input type="hidden" id="utm_medium" name="utm_medium">
 									<input type="hidden" id="utm_campaign" name="utm_campaign">
 									<input type="hidden" id="utm_content" name="utm_content">
 									<input type="hidden" id="utm_term" name="utm_term">
-									<select name="select" data-required data-validate data-class-modif="form">
+									<select name="select" id="select2" data-required data-validate data-class-modif="form">
 										<option value="" selected>Оберіть послугу</option>
 										<option value="1">MARKETING&STRATEGY</option>
 										<option value="2">SMM</option>
@@ -237,6 +237,7 @@
 										<option value="8">COPYWRITING</option>
 										<option value="9">WEBSITES&APPS</option>
 									</select>
+									<input type="hidden" name="select_text" id="select_text2">
 									<input type="text" data-validate data-required required name="email" data-error="Ім’я не вірне" placeholder="Ваше ім`я" class="name" id="name">
 									<input type="tel" data-validate data-required required name="phone" data-error="Номер телефону не вірний" placeholder="Номер телефону" class="tel" id="phone">
 
@@ -286,14 +287,14 @@
 								Оберіть послуги, які вас цікавлять, залиште контакти – ми зателефонуємо і про все домовимося.
 							</p>
 						</div>
-						<form data-ajax data-popup-message="#maildone" action="files/sendmail/webhoock.php" class="left-contact__form" method="POST">
+						<form data-ajax data-popup-message="#maildone" id="main-form1" action="files/sendmail/webhoock.php" class="left-contact__form" method="POST">
 							<div class="form-questions__body">
 								<input type="hidden" id="utm_source" name="utm_source">
 								<input type="hidden" id="utm_medium" name="utm_medium">
 								<input type="hidden" id="utm_campaign" name="utm_campaign">
 								<input type="hidden" id="utm_content" name="utm_content">
 								<input type="hidden" id="utm_term" name="utm_term">
-								<select name="select" data-required data-validate data-class-modif="form">
+								<select id="select1" name="select" data-required data-validate data-class-modif="form">
 									<option value="" selected>Оберіть послугу</option>
 									<option value="1">MARKETING&STRATEGY</option>
 									<option value="2">SMM</option>
@@ -305,6 +306,7 @@
 									<option value="8">COPYWRITING</option>
 									<option value="9">WEBSITES&APPS</option>
 								</select>
+								<input type="hidden" name="select_text" id="select_text1">
 								<input type="text" data-validate data-required required name="email" data-error="Ім’я не вірне" placeholder="Ваше ім`я" class="name" id="name">
 								<input type="tel" data-validate data-required required name="phone" data-error="Номер телефону не вірний" placeholder="Номер телефону" class="tel" id="phone">
 
@@ -327,13 +329,19 @@
 						</svg>
 					</button>
 					<div class="popup__text">
-						Popup content
+						<svg class="done-text-img" xmlns="http://www.w3.org/2000/svg" width="80" height="81" viewBox="0 0 80 81" fill="none">
+							<path d="M70.5813 32.6313C69.4031 31.4 68.1844 30.1313 67.725 29.0156C67.3 27.9937 67.275 26.3 67.25 24.6594C67.2031 21.6094 67.1531 18.1531 64.75 15.75C62.3469 13.3469 58.8906 13.2969 55.8406 13.25C54.2 13.225 52.5062 13.2 51.4844 12.775C50.3719 12.3156 49.1 11.0969 47.8687 9.91875C45.7125 7.84687 43.2625 5.5 40 5.5C36.7375 5.5 34.2906 7.84687 32.1313 9.91875C30.9 11.0969 29.6313 12.3156 28.5156 12.775C27.5 13.2 25.8 13.225 24.1594 13.25C21.1094 13.2969 17.6531 13.3469 15.25 15.75C12.8469 18.1531 12.8125 21.6094 12.75 24.6594C12.725 26.3 12.7 27.9937 12.275 29.0156C11.8156 30.1281 10.5969 31.4 9.41875 32.6313C7.34687 34.7875 5 37.2375 5 40.5C5 43.7625 7.34687 46.2094 9.41875 48.3687C10.5969 49.6 11.8156 50.8688 12.275 51.9844C12.7 53.0062 12.725 54.7 12.75 56.3406C12.7969 59.3906 12.8469 62.8469 15.25 65.25C17.6531 67.6531 21.1094 67.7031 24.1594 67.75C25.8 67.775 27.4937 67.8 28.5156 68.225C29.6281 68.6844 30.9 69.9031 32.1313 71.0813C34.2875 73.1531 36.7375 75.5 40 75.5C43.2625 75.5 45.7094 73.1531 47.8687 71.0813C49.1 69.9031 50.3688 68.6844 51.4844 68.225C52.5062 67.8 54.2 67.775 55.8406 67.75C58.8906 67.7031 62.3469 67.6531 64.75 65.25C67.1531 62.8469 67.2031 59.3906 67.25 56.3406C67.275 54.7 67.3 53.0062 67.725 51.9844C68.1844 50.8719 69.4031 49.6 70.5813 48.3687C72.6531 46.2125 75 43.7625 75 40.5C75 37.2375 72.6531 34.7906 70.5813 32.6313ZM66.9719 44.9094C65.475 46.4719 63.925 48.0875 63.1031 50.0719C62.3156 51.9781 62.2812 54.1562 62.25 56.2656C62.2188 58.4531 62.1844 60.7438 61.2125 61.7125C60.2406 62.6813 57.9656 62.7188 55.7656 62.75C53.6562 62.7812 51.4781 62.8156 49.5719 63.6031C47.5875 64.425 45.9719 65.975 44.4094 67.4719C42.8469 68.9688 41.25 70.5 40 70.5C38.75 70.5 37.1406 68.9625 35.5906 67.4719C34.0406 65.9813 32.4125 64.425 30.4281 63.6031C28.5219 62.8156 26.3438 62.7812 24.2344 62.75C22.0469 62.7188 19.7562 62.6844 18.7875 61.7125C17.8187 60.7406 17.7812 58.4656 17.75 56.2656C17.7188 54.1562 17.6844 51.9781 16.8969 50.0719C16.075 48.0875 14.525 46.4719 13.0281 44.9094C11.5312 43.3469 10 41.75 10 40.5C10 39.25 11.5375 37.6406 13.0281 36.0906C14.5187 34.5406 16.075 32.9125 16.8969 30.9281C17.6844 29.0219 17.7188 26.8438 17.75 24.7344C17.7812 22.5469 17.8156 20.2562 18.7875 19.2875C19.7594 18.3187 22.0344 18.2812 24.2344 18.25C26.3438 18.2188 28.5219 18.1844 30.4281 17.3969C32.4125 16.575 34.0281 15.025 35.5906 13.5281C37.1531 12.0312 38.75 10.5 40 10.5C41.25 10.5 42.8594 12.0375 44.4094 13.5281C45.9594 15.0187 47.5875 16.575 49.5719 17.3969C51.4781 18.1844 53.6562 18.2188 55.7656 18.25C57.9531 18.2812 60.2438 18.3156 61.2125 19.2875C62.1813 20.2594 62.2188 22.5344 62.25 24.7344C62.2812 26.8438 62.3156 29.0219 63.1031 30.9281C63.925 32.9125 65.475 34.5281 66.9719 36.0906C68.4688 37.6531 70 39.25 70 40.5C70 41.75 68.4625 43.3594 66.9719 44.9094ZM54.2688 31.2312C54.5012 31.4634 54.6856 31.7392 54.8114 32.0426C54.9372 32.3461 55.002 32.6715 55.002 33C55.002 33.3285 54.9372 33.6539 54.8114 33.9574C54.6856 34.2608 54.5012 34.5366 54.2688 34.7688L36.7688 52.2688C36.5366 52.5012 36.2608 52.6856 35.9574 52.8114C35.6539 52.9372 35.3285 53.002 35 53.002C34.6715 53.002 34.3461 52.9372 34.0426 52.8114C33.7392 52.6856 33.4634 52.5012 33.2312 52.2688L25.7312 44.7688C25.2621 44.2996 24.9986 43.6634 24.9986 43C24.9986 42.3366 25.2621 41.7004 25.7312 41.2312C26.2003 40.7621 26.8366 40.4986 27.5 40.4986C28.1634 40.4986 28.7997 40.7621 29.2688 41.2312L35 46.9656L50.7312 31.2312C50.9634 30.9988 51.2392 30.8144 51.5426 30.6886C51.8461 30.5628 52.1715 30.498 52.5 30.498C52.8285 30.498 53.1539 30.5628 53.4574 30.6886C53.7608 30.8144 54.0366 30.9988 54.2688 31.2312Z" fill="#D66F49" />
+						</svg>
+						<div class="done-text">
+							<p class="done-text__title">Бриф надіслано</p>
+							<div class="done-text__subtitle">Невдовзі ми зателефонуємо вам</div>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20241015130942"></script>
+	<script src="js/app.min.js?_v=20241015134932"></script>
 </body>
 
 </html>
