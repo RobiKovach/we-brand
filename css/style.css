@@ -111,7 +111,7 @@ h6 {
   min-width: 0
 }
 [class*=__container] {
-  max-width: 81.25rem;
+  max-width: 90rem;
   margin: 0 auto;
   padding: 0 4.375rem
 }
@@ -122,6 +122,9 @@ h6 {
 }
 .menu-open .select {
   left: -150%
+}
+.popup-show .select {
+  left: 0
 }
 .select__body {
   position: relative
@@ -572,7 +575,10 @@ body {
   justify-content: space-between
 }
 .item-services__item {
-  width: 100%
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: .5rem
 }
 .item-services-item__title {
   color: #d66f49;
